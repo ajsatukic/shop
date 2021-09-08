@@ -8,10 +8,10 @@
         <h:outputStylesheet library="css" name="home.css"/>
         <style>
 body {
-	margin: 0;
-	background: white;
-	font-family: cursive;
-	font-weight: 800;
+    margin: 0;
+    background: white;
+    font-family: cursive;
+    font-weight: 800;
 }
 .navbar {  
   background-color: #eeccff;
@@ -23,7 +23,7 @@ body {
 .navbar a {
   float: right;
   font-size: 16px;
-  color: white;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -37,7 +37,7 @@ body {
   font-size: 16px;  
   border: none;
   outline: none;
-  color: white;
+  color: black;
   padding: 14px 16px;
   background-color: #eeccff;
   font-family: inherit;
@@ -99,15 +99,44 @@ body {
     border: solid black;
     text-align: center;
     font-size: 20px;
-    color: white;
+    color: black;
     margin-inline-start: 200px;
-    margin-top: -170px;
+    margin-top: -180px;
 }
 .mainPage #firstarrow{
     margin: 0;
     font-size: 200px;
     margin-left: 43px;
     height: 210px;
+}
+#bubbles img{
+    width: 550px;
+    position: fixed;
+    top: 50px;
+    right: 0;
+}
+#links{
+    border: solid black;
+    width: max-content;
+    font-size: 20px;
+    background-color: #eeccff;
+    margin-left: 10px
+}
+#images img{
+    border-radius: 50%;
+    border: solid black;
+}
+#quote{
+    position: fixed;
+    bottom: 10px;
+    border: solid black;
+    width: 850px;
+    left: 50px;
+    height: 100px;
+    text-align: center;
+    font-size: 25px;
+    font-style: halvetica;
+    background-color: #eeccff;
 }
         </style>
     </h:head>
@@ -126,29 +155,31 @@ body {
   </div> 
   <a href="register.xhtml">Register</a>
   
-   <div>
-      <h:form>
-          <h:commandButton value="#{logoutBean.isUserLoggedIn()}" action="#{logoutBean.logout()}" class="loginButton"/>
-      </h:form>
-  </div>
 </div>
         <div class="mainPage">
             <div id="bubbles">
+            
                 <p id="firstarrow">&#x219C;</p>
                 <p id="firstbubble">
                 To see our collections please first choose categories.
                 </p>
-                <img style= "border-radius: 50%;border: solid black;" src="images/1.jpg"></img>
-                <img style= "border-radius: 50%;border: solid black;" src="images/2.jpg"></img>
-                <img style= "border-radius: 50%;border: solid black;" src="images/3.jpg"></img>
-                <img style= "border-radius: 50%;border: solid black;" src="images/4.jpg"></img>
-                <img style= "border-radius: 50%;border: solid black;" src="images/5.jpg"></img>
-                <img style= "border-radius: 50%;border: solid black;" src="images/6.jpg"></img>
-                <img style= "border-radius: 50%;border: solid black;" src="images/7.jpg"></img>
-                <img style= "border-radius: 50%;border: solid black;" src="images/8.jpg"></img>
-            </div>
-           
-        </div>     
+                <img src="images/bg1.jpg" style="&#10;    margin-left: 730px;&#10;    width: 550px;&#10;    margin-top: -6;&#10;    margin-top: 0px;&#10;" />
+            </div>   
+        </div>
+        <div id="links">
+            <a href="user.xhtml">User</a>
+            <a href="admin.xhtml">Admin</a>
+            <a href="add.xhtml">Add</a>
+        </div>
+        <div id="images">
+            <img style="position: fixed;" src="images/1.jpg"></img> 
+            <img style="position: fixed;left: 310px" src="images/6.jpg"></img>
+            <img style="position: fixed;top: 50px;left: 475px;" src="images/4.jpg"></img>
+            <img style="position: fixed;left: 620px;" src="images/8.jpg"></img>            
+        </div>
+        <div id="quote">
+            Shoes speak louder than words.
+        </div>
         
       
     </h:body>
