@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+    <h:head>
+        <title>Home Page</title>
+        <h:outputStylesheet library="css" name="home.css"/>
+        <style>
+body {
+	margin: 0;
+	background: white;
+	font-family: cursive;
+	font-weight: 800;
+}
+.navbar {  
+  background-color: #eeccff;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left; 
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: #eeccff;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #d580ff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #d580ff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.loginButton{
+    float:right;
+    margin-top: 13px;
+    margin-right: 13px;
+    color: white;
+    text-align: center;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #eeccff;
+    padding: 5px 20px;
+}
+.mainPage{
+    margin-top: 50px;
+    
+}
+.mainPage #firstbubble{
+    border-radius: 50%;
+    background-color: #eeccff;
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    border: solid black;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    margin-inline-start: 200px;
+    margin-top: -170px;
+}
+.mainPage #firstarrow{
+    margin: 0;
+    font-size: 200px;
+    margin-left: 43px;
+    height: 210px;
+}
+        </style>
+    </h:head>
+    <h:body>
+      <div class="navbar">
+  <a href="index.xhtml">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Categories 
+    </button>
+    <div class="dropdown-content">
+      <a href="Summer.xhtml">Summer</a>
+      <a href="Winter.xhtml">Winter</a>
+      <a href="Sport.xhtml">Sport</a>
+      <a href="Elegant.xhtml">Elegant</a>
+    </div>
+  </div> 
+  <a href="register.xhtml">Register</a>
+  
+   <div>
+      <h:form>
+          <h:commandButton value="#{logoutBean.isUserLoggedIn()}" action="#{logoutBean.logout()}" class="loginButton"/>
+      </h:form>
+  </div>
+</div>
+        <div class="mainPage">
+            <div id="bubbles">
+                <p id="firstarrow">&#x219C;</p>
+                <p id="firstbubble">
+                To see our collections please first choose categories.
+                </p>
+                <img style= "border-radius: 50%;border: solid black;" src="images/1.jpg"></img>
+                <img style= "border-radius: 50%;border: solid black;" src="images/2.jpg"></img>
+                <img style= "border-radius: 50%;border: solid black;" src="images/3.jpg"></img>
+                <img style= "border-radius: 50%;border: solid black;" src="images/4.jpg"></img>
+                <img style= "border-radius: 50%;border: solid black;" src="images/5.jpg"></img>
+                <img style= "border-radius: 50%;border: solid black;" src="images/6.jpg"></img>
+                <img style= "border-radius: 50%;border: solid black;" src="images/7.jpg"></img>
+                <img style= "border-radius: 50%;border: solid black;" src="images/8.jpg"></img>
+            </div>
+           
+        </div>     
+        
+      
+    </h:body>
+</html>
