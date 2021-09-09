@@ -18,7 +18,7 @@ public class UsersManagedBean implements Serializable{
     
     private List<Users> _usersList;
     private String user;
-    private String pass;
+    private String password;
     private int idprivilege;    
     private String message = "";
     
@@ -51,12 +51,12 @@ public UsersManagedBean(){
         this.user = user;
     }
 
-    public String getPass() {
-        return pass;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public int getIdprivilege() {
@@ -73,7 +73,7 @@ public UsersManagedBean(){
     
         for(Users logg : _usersList){
             if (user !=null && user.equals(logg .getUsername())){
-                if(pass!=null && pass.equals(logg.getPassword())){
+                if(pass!=null && password.equals(logg.getPassword())){
                     idprivilege = logg.getIdPrivilege();
                 }
             }
@@ -89,10 +89,10 @@ public UsersManagedBean(){
     }
     
     public String register(){ 
-    Users users= new Users(user, pass, idprivilege);
+    Users users= new Users(user, password, idprivilege);
     users.setId(idprivilege);
     users.setUsername(user);
-    users.setPassword(pass);
+    users.setPassword(password);
     usersFacadeLocal.create(users);
     init();
     return "index";
